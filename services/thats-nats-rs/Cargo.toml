@@ -1,0 +1,12 @@
+[package]
+name = "thats-nats-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.81"
+async-nats = "0.34.0"
+futures-util = "0.3.30"
+tokio = { version = "1.36.0", features = ["full"] }
