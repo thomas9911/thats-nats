@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.81"
-async-nats = "0.34.0"
+async-nats = {version = "0.34.0", features = ["service"]}
 futures-util = "0.3.30"
 rhai = { version = "1.17.1", features = ["serde"] }
 rhai-rand = "0.1.6"
