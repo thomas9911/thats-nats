@@ -6,7 +6,6 @@ defmodule ThatsNats.Service do
     {result, _} = Code.eval_string(body)
 
     {:reply, Jason.encode!(%{result: result})}
-
   rescue
     e in CompileError -> {:reply, Jason.encode!(%{error: e})}
   end
