@@ -42,7 +42,7 @@ use rhai::Engine;
 use rhai::packages::Package; 
 use rhai_rand::RandomPackage;
 
-const STREAM_NAME: &str = "rust";
+const CHANNEL_NAME: &str = "rust";
 
 
 #[tokio::main]
@@ -53,7 +53,7 @@ async fn main() -> anyhow::Result<()> {
     .connect("nats://127.0.0.1:4222")
     .await?;
 
-    let mut messages = nc.subscribe(STREAM_NAME).await?;
+    let mut messages = nc.subscribe(CHANNEL_NAME).await?;
     let mut engine = Engine::new();
     let random = RandomPackage::new();
     random.register_into_engine(&mut engine);

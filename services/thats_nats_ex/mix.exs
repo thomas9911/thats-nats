@@ -23,7 +23,8 @@ defmodule ThatsNats.MixProject do
   defp deps do
     [
       {:gnat, "~> 1.8"},
-      {:jetstream, "~> 0.0.9"}
+      {:jetstream, "~> 0.0.9"},
+      {:jason, "~> 1.0"}
     ]
   end
 end
