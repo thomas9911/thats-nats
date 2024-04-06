@@ -39,7 +39,7 @@ func main() {
 
 	srv, err := micro.AddService(nc, micro.Config{
 		Name:        "go_aas",
-		Version:     "0.0.1",
+		Version:     "0.1.0",
 		Description: "Run request as a go 'script'",
 	})
 	defer srv.Stop()
